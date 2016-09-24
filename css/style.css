@@ -1,0 +1,373 @@
+*{
+padding:0px;
+margin:0px;
+
+}
+
+
+
+.header-nav a{
+	color: #ffffff !important;
+	
+
+}
+a:focus, a:hover {
+background-color: #337ab7 !important;
+
+}
+a.navbar-brand{
+	cursor: pointer;
+}
+.navbar-header{
+	float: none !important;
+}
+
+.header-nav .navbar-default{
+	background-color: #0275d8;
+	margin: 0;
+	border:0;
+	border-radius: 0px;
+}
+
+.header-nav .color{
+	background-color: #255277;
+	border-bottom: 1px solid white !important;
+}
+
+
+
+.navbar .container .dropdown-menu{
+
+	background-color: #255277;
+}
+
+.header-nav a.users-image{
+ 	/*border-radius: 100%;*/
+ 	width: 50px;
+ 	height: 50px;
+ 
+
+}
+a.users-image img{
+ 	width: 100%;
+ 	border-radius: 100%;
+ }
+
+
+div#section .container{
+
+	padding-top: 20px;
+}
+
+
+div#section .image{
+	/*width:318px;*/
+	height: 12em;
+	overflow: hidden;
+}
+div#section .image img{
+	display: block;
+	width:auto;
+	margin: 0 auto;
+	text-align: center;
+	height: inherit;
+}
+div.card{
+border:1px solid #edeaea;
+padding:10px;
+margin-bottom: 10px;
+
+
+}
+
+div#section .col-md-3{
+overflow: hidden;
+box-sizing:border-box; 
+}
+span.signin{
+	display: none;
+}
+h4 span.align{
+	float: right;
+}
+
+
+.form-control{
+	margin-top: 8px;
+	padding: 4px 20px !important;
+	color: white !important;
+	background-color:#255277 !important;
+}
+
+#pagination{
+	text-align: center;
+}
+
+#pagination li a:hover{
+	color: white !important;
+}
+
+.list1 a,.list2 a,.list3 a{
+cursor: default;
+}
+.list1 a:hover, .list1 a:focus,.list2 a:focus, .list2 a:hover,.list3 a:focus, .list3 a:hover{
+cursor: default;
+background-color: #255277 !important;
+}
+
+
+::-webkit-input-placeholder {
+   color: white !important;
+   opacity: 1;
+}
+
+.container .row h2{
+text-align: center;
+color: #0275d8;
+}
+
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:991px){
+	input[type="range"]{
+		display: none !important;
+	}
+	.list1 a,.list2 a,.list3 a{
+cursor: default;
+}
+.list1 a:hover, .list1 a:focus,.list2 a:focus, .list2 a:hover,.list3 a:focus, .list3 a:hover{
+cursor: default;
+background-color: #255277 !important;
+}
+	.list2{
+		display: none;
+	}
+
+
+}
+
+@media only screen and (max-width: 768px){
+.signin{
+	display: block !important;
+	border: none;
+}
+.display{
+	display: none !important;
+}
+.signin li{
+	float: right;
+}
+
+}
+
+
+/*side nav----------------------*/
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #255277;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav ul{
+	list-style-type: none;
+}
+.sidenav ul li{
+	border-bottom: 1px solid white;
+	margin-left: 25px;
+
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav span{
+	cursor: pointer;
+	color: white;
+	 position: absolute;
+    top: 0;
+    right:20px;
+    font-size: 28px;
+    margin-left: 50px;
+}
+
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+/*   side nav end---------------------*/
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+
+.navbar-header .signin{
+	display: block !important;
+	visibility: visible !important;
+}
+
+} 
+
+
+
+
+
+/*Cart page*/
+
+
+#insert-card-heading{
+	text-align: center;
+	color: white;
+	padding: 8px 0px;
+	font-family: serif;
+    margin:0px;
+    box-shadow: 0 3px 0px rgba(0,0,0,.175);
+    text-transform: capitalize;
+    /*font-variant: small-caps; */
+	background-color:#255277; 
+}
+#insert-card-heading span{
+	padding-left: 15px;
+}
+
+
+div#cart{
+width: 60%;
+margin:40px auto 0; 
+
+}
+div#cart .form-group .form-control{
+	margin-bottom: 8px;
+	color: black !important;
+	background-color: transparent !important; 
+}
+
+.input-group{
+padding-left: 14px !important;
+}
+#InputAmount{
+	margin-top: 0px !important; 
+	margin-bottom: 0px !important; 
+}
+
+
+div#cart .form-group ::-webkit-input-placeholder , label{
+   color: #255277 !important;
+   opacity: 1;
+}
+
+div#cart .list1, div#cart .list2, div#cart .list3{
+
+	display: none;
+}
+
+
+div#cart .list0 a:hover, a:focus {
+
+color: white;
+border-radius: 4px;
+/*background-color: transparent !important;*/
+
+
+}
+.label1{
+	padding-top: 15px !important;
+}
+
+.userinfo{
+
+color: #2e6da4;
+text-shadow:2px 2px 3px gray;
+padding-bottom: 45px;
+background-image: url(../images/border.png);
+background-repeat: no-repeat;
+background-position: bottom;
+background-position: left;
+background-size: 260px;
+
+
+}
+span.glyphicon{
+	font-size: 16px;
+
+}
+span.badge{
+	color:#0275d8;
+	margin-top: -17px !important;
+	background-color: #fff;
+}
+a.left{
+	float: right;
+}
+
+table td img{
+	width: 100px;
+}
+div.table-responsive{
+	margin-top: 60px;
+}
+table td img.sign{
+	width:20px;
+	cursor:pointer;
+}
+span.sign{
+	cursor: pointer;
+	color:#018FC8;
+	margin-top: 4px;
+	text-align: center;
+	width: 100px;
+}
+h2.cartselected{
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	background-color: #2e6da4;
+	padding: 10px 0px;
+	border-radius: 5px;
+}

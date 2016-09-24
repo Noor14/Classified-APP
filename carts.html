@@ -1,0 +1,111 @@
+
+<div class="header-nav">
+  <nav class="navbar navbar-default color">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+ 
+      <a class="navbar-brand" onclick="openNav();">
+      <span class="glyphicon glyphicon-menu-hamburger display"></span>
+      <span class="glyphicon glyphicon-menu-hamburger signin"> Category</span></a>
+ <div class="collapse navbar-collapse">
+  
+     
+      <ul class="nav navbar-nav" ng-repeat="nav in navigation"   ng-class="getcssclass($index)">
+       
+        <li class="dropdown">
+          <a href="#" onclick="return false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{nav}}<span class="caret" ng-if="$index === 0"></span></a>
+          <ul class="dropdown-menu" ng-if="$index === 0">
+            <li ng-repeat="subnav in submenu" ng-model="subnav" ng-click="option.selected = subnav"><a href="#" onclick="return false">{{subnav}}</a></li>
+          </ul>
+        </li>
+        <li>
+        <select class="form-control" ng-if="$index===1" ng-model="option.selected">
+        <option value="">All</option>
+          <option ng-repeat="cart in carts | unique : 'location'">{{cart.location}}</option>
+        </select>
+        </li>
+        <li ng-if="$index===2">
+          <input type="range" stept="6" ng-model="carts.price" ng-change="option.selected=carts.price" class="form-control">
+        </li>
+
+        <li ng-if="$index===3">
+          <input type="text" ng-model="option.selected" class="form-control" placeholder="Keywords">
+        </li>
+
+
+        
+      </ul>
+    </div>
+
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+   <!-- /.navbar-collapse -->
+  </div><!-- /.container-->
+
+
+</nav>
+
+</div>
+
+<!--  header end............. -->
+
+
+<div id="section" class="header-nav">
+    
+<div id="mySidenav" class="sidenav">
+  <span class="closebtn" onclick="closeNav()">&times;</span>
+<ul>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Clients</a></li>
+  <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+
+
+
+    <div id="main">
+
+    <div class="container">
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6" dir-paginate="cart in carts | filter : option.selected | itemsPerPage : 12">
+      <div class="card">
+      <div class="image">
+  <img class="card-img-top img-responsive" ng-src="{{cart.image}}"
+       alt="Card image cap">
+       </div>
+  <div class="card-block">
+    <h4 class="card-title">{{cart.title + ' $' + cart.Price}}<span class="align">{{cart.location}}</span></h4>
+    <p class="card-text">{{cart.detail}}</p>
+    <a class="btn btn-primary" ng-click="addcart(cart)">VIEW CART</a>
+  </div>
+</div>
+
+    </div>
+    <h2 ng-show="!(carts | filter : option.selected).length">Data not found</h2>
+
+  </div>
+  </div>
+
+    </div>
+
+</div>
+    <div id="pagination">
+  
+
+  <dir-pagination-controls
+max-size="9"
+direction-links="true"
+boundry-links="true">
+
+  </dir-pagination-controls>
+  
+
+
+    </div>
+  
+     <script type="text/javascript" src="js/myquery.js"> </script>

@@ -1,0 +1,14 @@
+<div class="container" >
+    <h2 class="cartselected col-md-4 col-sm-6 col-xs-8 col-md-offset-4 col-sm-offset-3 col-xs-offset-2" ng-show="UserSelectedCart == '' "> First Select the Cart</h2>
+    <div class="table-responsive" >
+        <table class="table" >
+            <tr ng-show="UserSelectedCart != ''"><th>#</th> <th>Product Image</th> <th>Product Description</th> <th>Price</th> <th>Remove Product</th> <th>Selected Cart</th></tr>
+            <tr ng-repeat="usercart in UserSelectedCart"><td>{{$index + 1}}</td> <td><img ng-src="{{usercart.image}}" alt="cartPix"></td> <td>{{usercart.detail}}</td><td>{{'$'+usercart.Price }}</td> <td><span class="sign glyphicon  glyphicon-trash" ng-click="removeCart($index); pop()"></span></td> <td><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</button></td></tr>
+        </table>
+    </div>
+
+
+
+</div>
+
+<toaster-container toaster-options="{'close-button': true,'position-class': 'toast-top-center'}"></toaster-container>

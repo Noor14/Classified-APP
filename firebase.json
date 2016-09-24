@@ -1,0 +1,9 @@
+{
+  "firebase": "bookkartapp",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

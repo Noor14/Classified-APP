@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="module">
+<head>
+  <title>SHOPPIFY</title>
+  <!--<base href="/">-->
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon-icon.png">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/mdb.min.css">-->
+  <link type="text/css" href="js/bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/angularUtils-pagination/dirPagination.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/AngularJS-Toaster/toaster.min.js"></script>
+  <script type="text/javascript" src="js/module.js"></script>
+  <script type="text/javascript" src="js/maincontroller.js"></script>
+  <script type="text/javascript" src="js/totalcartcontroller.js"></script>
+  <script type="text/javascript" src="js/controller.js"></script>
+  <script type="text/javascript" src="js/usercontroller.js"></script>
+  <script type="text/javascript" src="js/cartcontroller.js"></script>
+
+</head>
+<body>
+
+<!-- is tarha bh controller use hota hai lekin this keyword lagana hota hai controller me-->
+
+<div class="header-nav" ng-controller="mainController as main">
+  
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    
+      <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-shopping-cart"></span> Shoppify</a>
+       <div class="collapse navbar-collapse signin">
+  
+     
+      <ul class="nav navbar-nav navbar-right ">
+        <li class="display"><a href="#/usercart">Add a Product</a></li>
+        <li><a href="#/totalcart" ><span class="glyphicon glyphicon-shopping-cart"><span class="badge">{{totalCartLength}}</span></span></a></li>
+       <li><a class="users-image" href="#" onclick="return false"><img src="images/mypic.jpg"></a></li>
+      </ul>
+    </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+   <!-- /.navbar-collapse -->
+  </div><!-- /.container-->
+
+
+</nav>
+
+
+  
+
+</div>
+<div ng-view></div>
+
+</body>
+</html>

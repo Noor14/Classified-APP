@@ -1,0 +1,126 @@
+
+
+
+<h2 id="insert-card-heading">Product Information</h2>
+
+<div id="cart">
+
+<form class="form-horizontal">
+  <div class="form-group">
+  <div class="category">
+    <label for="Cart Category" class="col-sm-2 control-label label1">Cart Category</label>
+    <div class="col-sm-10">
+     <ul class="nav navbar-nav" ng-repeat="nav in navigation"   ng-class="getcssclass($index)">
+       
+        <li class="dropdown">
+          <a href="#" onclick="return false ;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{nav}}<span class="caret" ng-if="$index === 0"></span></a>
+
+           <ul class="dropdown-menu" ng-if="$index === 0">
+            <li ng-repeat="subnav in submenu" ng-model="subnav" ng-click="option.selected = subnav"><a href="#" onclick="return false ;">{{subnav}}</a></li>
+          </ul>
+
+          </li>
+          </ul>
+      <input type="text" ng-model="option.selected" disabled class="form-control" id="inputEmail3" placeholder="Cart Title">
+    </div>
+</div>
+
+<label for="city" class="col-sm-2 control-label">City</label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="city" class="form-control" id="city" placeholder="City">
+    </div>
+
+
+ <label for="phone" class="col-sm-2 control-label">Phone NO #</label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="phone" class="form-control" id="phone" placeholder="Phone No">
+    </div>
+
+
+
+<label for="cart-detail" class="col-sm-2 control-label">Cart Detail</label>
+    <div class="col-sm-10">
+     <textarea class="form-control" ng-model="cartdetail" rows="3" placeholder="Cart Detail"></textarea>
+    </div>
+
+
+
+
+    <label for="Amount" class="col-sm-2 control-label">Amount</label>
+    <div class="input-group col-sm-4">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" ng-model="amount" id="InputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+
+
+
+<label for="cart-image" class="col-sm-2 control-label">Upload Image</label>
+    <div class="col-sm-4">
+     <input  type="file" class="form-control" ng-model="image" id="Image" placeholder="Upload Image">
+    </div>
+
+
+
+   <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary" ng-click="insert()">Add A Product <span class="glyphicon glyphicon-shopping-cart"></span>
+      </button>
+    </div>
+
+  </div>
+
+
+</form>
+
+
+</div>
+
+
+
+
+<div id="section" class="user-cart">
+
+    <div class="container">
+    <h2 class="userinfo">USER LOG</h2>
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6" dir-paginate="cart in usercarts | itemsPerPage : 8">
+      <div class="card">
+      <div class="image">
+  <img class="card-img-top img-responsive" ng-src="{{cart.image}}" alt="user cart">
+       </div>
+     
+  <div class="card-block">
+    <h4 class="card-title">{{cart.title + ' $' + cart.Price}}<span class="align">{{cart.location}}</span></h4>
+    <p class="card-text">{{cart.detail}}</p>
+    <a href="#" class="btn btn-primary" ng-click="delete()">DELETE <span class="glyphicon glyphicon-trash"></span></a><a href="#/cart" class="left btn btn-primary" ng-click="Edit()">EDIT <span class="glyphicon glyphicon-pencil"></span></a>
+  </div>
+</div>
+
+
+    </div>
+    
+
+  </div>
+  </div>
+
+    </div>
+
+
+    <div id="pagination">
+  
+
+  <dir-pagination-controls
+max-size="9"
+direction-links="true"
+boundry-links="true">
+
+  </dir-pagination-controls>
+  
+
+
+    </div>
+
+
+
+

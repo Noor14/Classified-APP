@@ -1,0 +1,19 @@
+
+
+<!-- header end -->
+<h2 id="insert-card-heading">Cart Detail :</h2>
+
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table">
+       <tr><th>#</th> <th>Product Image</th> <th>Product Description</th> <th>Quantity</th> <th>Unit Price</th> <th>Add To Cart</th></tr>
+        <tr><td>{{$index + 1}}</td> <td><img ng-src="{{selecteditem.image}}" alt="cartPix"></td> <td>{{selecteditem.detail}}</td> <td><img class="sign" ng-click="cartdec()" ng-src="{{decrement}}" alt="-"> {{cartCount}} <img class="sign" ng-click="cartCount=cartCount+1" ng-src="{{increment}}" alt="+"></td> <td>{{'$'+selecteditem.Price }}</td> <td><button type="button" ng-click="addToCart(selecteditem.id); pop()" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button></td></tr>
+      </table>
+    </div>
+
+
+
+  </div>
+<toaster-container toaster-options="{'close-button': true,'position-class': 'toast-top-center'}"></toaster-container>
+
+
